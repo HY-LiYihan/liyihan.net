@@ -17,6 +17,7 @@ permissions:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: hy-liyihan/liyihan.net
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   publish:

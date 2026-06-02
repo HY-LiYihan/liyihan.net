@@ -1,0 +1,20 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  date?: Date;
+}
+
+const { title, description, date } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="section prose">
+    <p class="eyebrow">{date ? date.toLocaleDateString("en", { dateStyle: "medium" }) : "liyihan.net"}</p>
+    <h1>{title}</h1>
+    <p class="lede">{description}</p>
+    <slot />
+  </article>
+</BaseLayout>

@@ -1,0 +1,11 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  primary?: boolean;
+}
+
+const { href, label, primary = false } = Astro.props;
+---
+
+<a class:list={["button", { primary }]} href={href}>{label}</a>
